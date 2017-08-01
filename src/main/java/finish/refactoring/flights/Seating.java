@@ -16,15 +16,15 @@ public class Seating {
         return new Seating(0.6);
     }
 
-	private Seating(double allowanceRatio) {
+    private Seating(double allowanceRatio) {
         this.allowanceRatio = allowanceRatio;
-	}
+    }
 
-	double allowanceFor(long distance) {
-	    if (isLocalFlight(distance)) {
-	        return distance * (allowanceRatio - 0.1);
-	    }
-	    return distance * allowanceRatio;
+    double allowanceFor(long distance) {
+        if (isLocalFlight(distance)) {
+            return distance * (allowanceRatio - 0.1);
+        }
+        return distance * allowanceRatio;
     }
 
     private boolean isLocalFlight(long distance) {

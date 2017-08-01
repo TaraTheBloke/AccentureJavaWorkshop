@@ -15,7 +15,7 @@ public class PokerFace {
     }
 
     @SuppressWarnings("resource")
-	private String promptForFileName() {
+    private String promptForFileName() {
         System.out.println("name of file > ");
         return new Scanner(System.in).nextLine();
     }
