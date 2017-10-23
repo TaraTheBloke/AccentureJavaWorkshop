@@ -66,8 +66,10 @@ public class Program {
     private static void demoFlatMapping(List<String> data) {
         Stream<Character> results1 = data.stream().flatMap(Utils::toStream);
         printResults("First flat mapping produced:", results1);
+
         IntStream results2 = data.stream().flatMapToInt(String::chars);
         printResults("Second flat mapping produced:", results2);
+
         Stream<Character> results3 = data.stream()
                                          .flatMapToInt(String::chars)
                                          .mapToObj(i -> Character.valueOf((char) i));
@@ -96,8 +98,10 @@ public class Program {
     private static void demoSingleUse(List<String> data) {
         Stream<String> stream = data.stream();
         System.out.println("First iteration of stream...");
+
         stream.forEach(System.out::println);
         System.out.println("Second iteration of stream...");
+
         try {
             stream.forEach(System.out::println);
         } catch (IllegalStateException ex) {
