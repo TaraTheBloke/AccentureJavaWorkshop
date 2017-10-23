@@ -16,7 +16,7 @@ class Hand {
     private final int suitCount;
     private final int sequenceStart;
 
-    public Hand(String cards) {
+    Hand(String cards) {
         this.rankCounts = rankCountsFor(cards);
         this.suitCount = suitCountFor(cards);
         this.sequenceStart = sequenceStartFor(rankCounts);

@@ -23,9 +23,10 @@ public class WordCounter {
     private final Scanner stdin = new Scanner(System.in);
 
     public void countWord() {
-        String fileName;
-        while ((!isExit(fileName = promptForFileName()))) {
+        String fileName = promptForFileName();
+        while ((!isExit(fileName))) {
             print(countOf(wordsIn(fileName)));
+            fileName = promptForFileName();
         }
     }
 
@@ -53,7 +54,7 @@ public class WordCounter {
     }
 
     private void print(Map<String, Long> wordCounts) {
-        wordCounts.entrySet().stream().forEach(e -> {
+        wordCounts.entrySet().forEach(e -> {
             System.out.printf("%1$10s   %2$d\n", e.getKey(), e.getValue());
         });
     }

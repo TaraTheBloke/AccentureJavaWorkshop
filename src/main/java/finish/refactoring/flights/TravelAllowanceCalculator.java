@@ -3,7 +3,6 @@ package finish.refactoring.flights;
 public class TravelAllowanceCalculator {
 
     private final FlightPathDatabase pathDatabase;
-
     private final FlightConcessionsEngine concessionsEngine;
 
     public TravelAllowanceCalculator(FlightConcessionsEngine concessionsEngine,

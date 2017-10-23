@@ -53,7 +53,7 @@ public class TravelAllowanceCalculatorTest {
     }
 
     @Test
-    public void shouldCalculateAllowanceForForLongBusinessClassFlight() {
+    public void shouldCalculateAllowanceForLongBusinessClassFlight() {
         Flight flight = aBusinessFlight()
                             .thatFliesBetween(DUBLIN, ISTANBUL)
                             .andTravels(210);
